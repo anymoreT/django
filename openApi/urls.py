@@ -47,7 +47,7 @@ admin.autodiscover()
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
-    url(r'^learn$', learn_views.index),  # new
+    url(r'^learn/', learn_views.index),  # new
     url(r'^admin/', admin.site.urls),
     url(r'^online/',include('online.urls')),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
