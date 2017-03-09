@@ -105,3 +105,6 @@ python manage.py dbshell
 Django 会自动进入在settings.py中设置的数据库，如果是 MySQL 或 postgreSQL,会要求输入数据库用户密码。
 
 在这个终端可以执行数据库的SQL语句。如果您对SQL比较熟悉，可能喜欢这种方式。
+
+10. 设置静态文件：
+在最外层新建 static目录；在settting文件里面添加STATICFILES_DIRS = [(os.path.join(BASE_DIR, 'static'))]；在html文件添加{% load staticfiles %}
