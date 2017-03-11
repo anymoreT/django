@@ -6,6 +6,9 @@ python manage.py runserver
 pip install -r requirements.txt
 4. 同步数据库
 python manage.py syncdb
+python manage.py makemigrations
+python manage.py migrate
+
 5.清空数据库
 python manage.py flush
 6.rest-framework文档
