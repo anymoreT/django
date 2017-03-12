@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'learn',
     'online',
     'rest_framework',
+    'rest_framework_swagger',
     'api',
 ]
 
