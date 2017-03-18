@@ -17,25 +17,19 @@ http://www.django-rest-framework.org/
 如果是 windows 用 cmd（开始 搜索 cmd 或者 快捷键 win + R，输入 cmd) 直接在 cmd 上操作。
 
 1. 新建一个 django project
-1
-2
+
 django-admin.py startproject project-name
 特别是在 windows 上，如果报错，尝试用 django-admin 代替 django-admin.py 试试
 一个 project 为一个项目，project-name 项目名称，改成你自己的，要符合Python 的变量命名规则（以下划线或字母开头）
 
 2. 新建 app
-1
-2
+
 python manage.py startapp app-name
 或 django-admin.py startapp app-name
 一般一个项目有多个app, 当然通用的app也可以在多个项目中使用。
 
 3. 同步数据库
-1
-2
-3
-4
-5
+
 python manage.py syncdb
 
 注意：Django 1.7.1及以上的版本需要用以下命令
@@ -48,17 +42,6 @@ python manage.py migrate
 4. 使用开发服务器
 开发服务器，即开发时使用，一般修改代码后会自动重启，方便调试和开发，但是由于性能问题，建议只用来测试，不要用在生产环境。
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
 python manage.py runserver
 
 # 当提示端口被占用的时候，可以用其它端口：
@@ -76,12 +59,7 @@ python manage.py flush
 此命令会询问是 yes 还是 no, 选择 yes 会把数据全部清空掉，只留下空表。
 
 6. 创建超级管理员
-1
-2
-3
-4
-5
-6
+
 python manage.py createsuperuser
 
 # 按照提示输入用户名和对应的密码就好了邮箱可以留空，用户名和密码必填
@@ -89,21 +67,19 @@ python manage.py createsuperuser
 # 修改 用户密码可以用：
 python manage.py changepassword username
 7. 导出数据 导入数据
-1
-2
+
 python manage.py dumpdata appname > appname.json
 python manage.py loaddata appname.json
 关于数据操作 详见：数据导入数据迁移，现在了解有这个用法就可以了。
 
 8. Django 项目环境终端
-1
 python manage.py shell
 如果你安装了 bpython 或 ipython 会自动用它们的界面，推荐安装 bpython。
 
 这个命令和 直接运行 python 或 bpython 进入 shell 的区别是：你可以在这个 shell 里面调用当前项目的 models.py 中的 API，对于操作数据，还有一些小测试非常方便。
 
 9. 数据库命令行
-1
+
 python manage.py dbshell
 Django 会自动进入在settings.py中设置的数据库，如果是 MySQL 或 postgreSQL,会要求输入数据库用户密码。
 
@@ -111,3 +87,11 @@ Django 会自动进入在settings.py中设置的数据库，如果是 MySQL 或 
 
 10. 设置静态文件：
 在最外层新建 static目录；在settting文件里面添加STATICFILES_DIRS = [(os.path.join(BASE_DIR, 'static'))]；在html文件添加{% load staticfiles %}
+
+11. rest api doc:
+http://www.django-rest-framework.org/tutorial/1-serialization/
+12. swager api:
+https://github.com/marcgibbons/django-rest-swagger
+
+13. djang doc:
+https://www.djangoproject.com/

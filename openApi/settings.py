@@ -63,6 +63,9 @@ MIDDLEWARE = [
 #     ]
 # }
 
+SWAGGER_SETTINGS = { "JSON_EDITOR" : True
+}
+
 ROOT_URLCONF = 'openApi.urls'
 
 TEMPLATES = [
