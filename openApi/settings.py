@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_swagger',
     'api',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -138,4 +139,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [(os.path.join(BASE_DIR, 'static'))]
-# STATICFILES_DIRS = [("F:\\projects\\django\\openApi")]
+
+#STATICFILES_DIRS = [("D:\\projects\\django\\openApi")]
