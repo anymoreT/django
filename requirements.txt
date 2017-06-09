@@ -2,3 +2,5 @@ Django==1.10
 djangorestframework==3.5.4
 django-rest-swagger==2.1.1
 Pillow==4.0.0
+pymysql
+configparser
