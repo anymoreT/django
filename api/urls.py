@@ -3,6 +3,7 @@ from . import views
 
 from rest_framework import routers
 from .views1 import StudentViewSet, UniversityViewSet, schema_view
+import pdb
 #
 # urlpatterns = [
 #                 url('^poem/$', views.PoemListView.as_view(), name = "poem_list"),
@@ -18,8 +19,8 @@ router = routers.DefaultRouter()
 router.register(r'students', StudentViewSet)
 router.register(r'universities', UniversityViewSet)
 
-urlpatterns = [
-    url(r'^docs/', schema_view),
-]
+# urlpatterns = [
+#     url(r'^docs/', schema_view),
+# ]
 
-urlpatterns += router.urls
+urlpatterns = router.urls

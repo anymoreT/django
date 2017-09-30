@@ -23,3 +23,9 @@ class Student(models.Model):
 
     def __unicode__(self):
         return '%s %s' % (self.first_name, self.last_name)
+
+
+class UserInfo(models.Model):
+    user = models.CharField(max_length = 50)
+    password =  models.CharField(max_length = 50)
+    email = models.CharField(max_length = 50)
